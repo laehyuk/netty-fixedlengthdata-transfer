@@ -1,0 +1,4 @@
+rootProject.name = 'netty-fixedlengthdata-transfer'
+include 'fld-transfer-client'
+include 'fld-transfer-server'
+include 'fld-transfer-core'
