@@ -67,9 +67,8 @@ subprojects {
     }
 }
 
-project(':fld-transfer-core') {
+project(':fld-transfer-server') {
     dependencies {
-        compile project(':fld-transfer-client')
-        compile project(':fld-transfer-server')
+        compile project(':fld-transfer-core')
     }
 }

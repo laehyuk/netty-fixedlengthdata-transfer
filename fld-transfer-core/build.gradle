@@ -1,12 +1,15 @@
 dependencies {
     implementation (
-            'org.springframework.boot:spring-boot-starter-web',
-//            "io.netty:netty-all:4.1.15.Final",
+            "org.springframework.boot:spring-boot-starter-data-mongodb-reactive:2.4.0",
+            "io.netty:netty-all:4.1.15.Final"
     )
-    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+    testImplementation(
+            'org.springframework.boot:spring-boot-starter-test',
+            "de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0",
+            "io.projectreactor:reactor-test:3.3.9.RELEASE"
+    ) {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
-    testImplementation ('org.springframework.batch:spring-batch-test')
     runtimeOnly ('com.h2database:h2')
 }
 
