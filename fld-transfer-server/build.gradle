@@ -6,9 +6,18 @@ dependencies {
     testImplementation(
             "io.projectreactor:reactor-test:3.3.12.RELEASE"
     )
+    testImplementation(
+            "org.springframework.boot:spring-boot-starter-test",
+    ) {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
     annotationProcessor(
             "org.springframework.boot:spring-boot-configuration-processor",
     )
+}
+
+test {
+    useJUnitPlatform()
 }
 
 jar.enabled = true; bootJar.enabled = false
