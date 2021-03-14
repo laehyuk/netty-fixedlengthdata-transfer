@@ -3,10 +3,10 @@ dependencies {
             "org.springframework.boot:spring-boot-starter-data-mongodb-reactive:2.4.0",
             "io.netty:netty-all:4.1.15.Final"
     )
+    testImplementation group: 'io.projectreactor', name: 'reactor-test', version: '3.4.3'
+    testImplementation group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: '2.2.0'
     testImplementation(
-            'org.springframework.boot:spring-boot-starter-test',
-            "de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0",
-            "io.projectreactor:reactor-test:3.3.9.RELEASE"
+            "org.springframework.boot:spring-boot-starter-test",
     ) {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
