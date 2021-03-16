@@ -16,6 +16,9 @@ public class NettyClient {
     private Channel channel;
     private Bootstrap bootstrap;
 
+    private final String SERVER_HOST = "127.0.0.1";
+    private final int SERVER_PORT = 8888;
+
     public void connect() throws InterruptedException {
         if (bootstrap == null) {
             createBootstrap();
@@ -37,7 +40,7 @@ public class NettyClient {
     }
 
     private synchronized void connectBootStrap() throws InterruptedException {
-        ChannelFuture channelFuture = bootstrap.connect("127.0.0.1", 8888).sync();
+        ChannelFuture channelFuture = bootstrap.connect(SERVER_HOST, SERVER_PORT).sync();
         channel = channelFuture.channel();
     }
 
