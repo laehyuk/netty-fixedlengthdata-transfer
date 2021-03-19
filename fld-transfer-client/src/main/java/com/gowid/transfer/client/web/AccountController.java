@@ -1,7 +1,10 @@
-package com.gowid.transfer.server.web;
+package com.gowid.transfer.client.web;
 
 import com.gowid.tranfser.core.domain.account.Account;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 @RestController
