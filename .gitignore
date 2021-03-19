@@ -5,3 +5,5 @@
 /fld-transfer-core/build/
 /fld-transfer-core/build/classes/java/main/
 /fld-transfer-server/build/
+
+/.idea/

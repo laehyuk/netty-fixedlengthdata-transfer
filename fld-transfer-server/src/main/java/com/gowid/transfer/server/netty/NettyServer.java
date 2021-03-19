@@ -23,13 +23,18 @@ public class NettyServer {
 
     private final NettyConfig nettyConfig;
 
-    public void run() throws InterruptedException {
+    public void connect() throws InterruptedException {
         if (serverBootstrap == null) {
             createBootstrap();
         }
         if (isDisconnected()) {
             bind();
         }
+    }
+
+    public void shutdown(){
+        workerGroup.shutdownGracefully();
+        bossGroup.shutdownGracefully();
     }
 
     private synchronized void createBootstrap() {
