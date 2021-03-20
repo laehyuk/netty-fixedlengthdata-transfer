@@ -1,6 +1,6 @@
 package com.gowid.transfer.client.web;
 
-import com.gowid.tranfser.core.domain.account.Account;
+import com.gowid.transfer.client.web.dto.AccountDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 public class AccountController {
 
     @GetMapping("/{id}")
-    private Mono<Account> getAccountById(@PathVariable String id) {
+    private Mono<AccountDto> getAccountById(@PathVariable String id) {
 
         //TODO
         return null;
