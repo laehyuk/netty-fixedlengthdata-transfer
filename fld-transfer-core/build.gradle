@@ -1,10 +1,13 @@
 dependencies {
     implementation (
             "org.springframework.boot:spring-boot-starter-data-mongodb-reactive:2.4.0",
-            "io.netty:netty-all:4.1.15.Final"
+            "org.springframework.boot:spring-boot-starter-data-mongodb",
+            "io.netty:netty-all:4.1.15.Final",
     )
-    testImplementation group: 'io.projectreactor', name: 'reactor-test', version: '3.4.3'
-    testImplementation group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: '2.2.0'
+    testImplementation(
+            'io.projectreactor:reactor-test:3.4.3',
+            'de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0'
+    )
     testImplementation(
             "org.springframework.boot:spring-boot-starter-test",
     ) {
