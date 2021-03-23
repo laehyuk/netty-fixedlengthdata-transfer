@@ -4,3 +4,5 @@ spring:
       database: test
       host: localhost
       port: 27017
+      username: leo
+      password: 1234
