@@ -72,3 +72,6 @@ project(':fld-transfer-server') {
         compile project(':fld-transfer-core')
     }
 }
+
+dependencies {
+}
