@@ -1,6 +1,6 @@
 dependencies {
     implementation(
-            "org.springframework.boot:spring-boot-starter-batch",
+            "org.springframework.boot:spring-boot-starter-web:2.4.2",
             "org.springframework.boot:spring-boot-starter-webflux:2.4.2",
             "org.springframework.boot:spring-boot-starter-actuator:2.4.2",
             "io.netty:netty-all:4.1.15.Final",
