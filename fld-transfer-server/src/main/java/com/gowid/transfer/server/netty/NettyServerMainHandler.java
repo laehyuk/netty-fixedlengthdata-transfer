@@ -13,6 +13,12 @@ import java.nio.charset.Charset;
 public class NettyServerMainHandler extends ChannelInboundHandlerAdapter {
 
     @Override
+    public void channelActive( ChannelHandlerContext ctx ) throws Exception {
+        log.info("channel activated");
+        super.channelActive(ctx);
+    }
+
+    @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         String message = ((ByteBuf) msg).toString(Charset.defaultCharset());
         log.info("channel read : {}", message);
