@@ -1,17 +1,26 @@
 package com.leo.tranfser.core.domain.account;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@SpringBootTest
 class AccountRepositoryTest {
 
     @Autowired
     private AccountRepository repository;
+
+    @BeforeEach
+    void init(){
+        repository.deleteAll();
+    }
 
     @Test
     public void givenValue_whenFindAllByValue_thenFindAccount() {
